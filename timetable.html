@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Department Timetable</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            color: #3366cc;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #3366cc;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            background-color: #3366cc;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #254061;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Computer Science Department Timetable</h1>
+
+    <table>
+        <tr>
+            <th>Time</th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+        <tr>
+            <td>8:00 AM - 10:00 AM</td>
+            <td>Duscrete Maths</td>
+            <td>Database</td>
+            <td>system operation</td>
+            <td>Operation Research</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>10:00 AM - 12:00 PM</td>
+            <td>Networking</td>
+            <td>Cyber security</td>
+            <td>system Analysis</td>
+            <td>Web Development</td>
+            <td></td>
+        </tr>
+    </tr>
+    <tr>
+        <td>12:00 PM - 02:00 PM</td>
+        <td>Python</td>
+        <td>java</td>
+        <td>C++</td>
+        <td>C#</td>
+        <td></td>
+    </tr>
+        <!-- Add more rows as needed -->
+    </table>
+
+    <!-- Add download buttons for PDF, Excel, and Word -->
+    <div>
+        <button onclick="downloadTimetable('pdf')">Download as PDF</button>
+        <button onclick="downloadTimetable('excel')">Download as Excel</button>
+        <button onclick="downloadTimetable('word')">Download as Word</button>
+    </div>
+
+    <script>
+        function downloadTimetable(format) {
+            // Implement logic for generating and downloading timetable in the specified format
+            // You may use libraries like jsPDF, SheetJS, or docxtemplater for PDF, Excel, and Word respectively
+            // Example: use jsPDF for PDF
+            if (format === 'pdf') {
+                // Include jsPDF library in your project and use it to generate and download PDF
+                // Example: https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js
+                const pdfElement = document.querySelector('body');
+                html2pdf(pdfElement);
+            }
+            // Implement similar logic for Excel and Word
+            // You may need to include additional libraries like SheetJS for Excel or docxtemplater for Word
+        }
+    </script>
+</body>
+
+</html>
